@@ -3,7 +3,7 @@
 // va applicato uno sconto del 40% per gli over 65.
 
 // PREZZO FISSO PER KM
-const prezzo =(0,21);
+const prezzo =(0.21);
 console.log(prezzo);
 
 // RACCOGLI INFO KM
@@ -16,21 +16,22 @@ console.log(età);
 
 // VARIABILI FASCE DI ETA
 
-let anziano = (65);
-let minorenne = (18);
+let anziano = 65;
+let minorenne = 18;
 
 // CALCOLO PREZZO PER KM
-let biglietto = (50);
+let biglietto = (distanza * prezzo);
 // VARIABILE PREZZI CON APPLICAZIONE SCONTO
 
 // CONDIZIONI SCONTI
-if (età <=  minorenne) {
-    biglietto = biglietto - (biglietto * 20 / 100);
+if (età >=  65) {
+    biglietto = biglietto - (biglietto * 40 / 100);
     console.log(biglietto);
-    console.log('applicato sconto minorenne')
-}  else if (età >= anziano);
-     biglietto = biglietto - (biglietto * 40 / 100)
-     console.log(biglietto);
-     console.log('applicato sconto anziano')
- 
+    console.log('applicato sconto anziano');
+}  else if (età <= 18);
+    biglietto = biglietto - (biglietto * 20 / 100);
+   console.log(biglietto);
+   console.log('applicato sconto minorenne');
+    
+
 
