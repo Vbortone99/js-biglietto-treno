@@ -13,6 +13,6 @@ let scontoUnder18 = (18);
 if (età >= scontoOver45) {
     console.log('scontoOver45');
 } 
- if (età <= 18)
+ if (età <= scontoUnder18)
      console.log('scontoUnder18');
 
