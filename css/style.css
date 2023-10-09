@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    padding: 30px 0px;
+}
+.container{
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    background-color:rgb(182, 178, 173);
+    border-radius:10px;
+    text-align: center;
+}
