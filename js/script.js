@@ -15,19 +15,22 @@ let età = prompt('quanti anni');
 console.log(età);
 
 // VARIABILI FASCE DI ETA
-let scontoOver65 = (65);
-let scontoUnder18 = (18);
+
+let anziano = (65);
+let minorenne = (18);
 
 // CALCOLO PREZZO PER KM
 let biglietto = (50);
 // VARIABILE PREZZI CON APPLICAZIONE SCONTO
 
 // CONDIZIONI SCONTI
-if (età <=  scontoUnder18) {
-    biglietto = (biglietto * 20 / 100);
+if (età <=  minorenne) {
+    biglietto = biglietto - (biglietto * 20 / 100);
     console.log(biglietto);
-} else if (età >= scontoOver65);
-    biglietto = (biglietto * 40 / 100)
-    console.log(biglietto);
+    console.log('applicato sconto minorenne')
+}  else if (età >= anziano);
+     biglietto = biglietto - (biglietto * 40 / 100)
+     console.log(biglietto);
+     console.log('applicato sconto anziano')
  
 
