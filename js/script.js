@@ -1,37 +1,33 @@
-// il prezzo del biglietto è definito in base ai km (0.21 € al km)
-// va applicato uno sconto del 20% per i minorenni
-// va applicato uno sconto del 40% per gli over 65.
+// // il prezzo del biglietto è definito in base ai km (0.21 € al km)
+// // va applicato uno sconto del 20% per i minorenni
+// // va applicato uno sconto del 40% per gli over 65.
 
-// PREZZO FISSO PER KM
-const prezzo =(0.21);
-console.log(prezzo);
-
-// RACCOGLI INFO KM
-let distanza = prompt('quanti chilometri');
-console.log(distanza);
-
-// RACCOGLI INFO ANNI
-let età = prompt('quanti anni');
-console.log(età);
-
-// VARIABILI FASCE DI ETA
-
-let anziano = 65;
-let minorenne = 18;
-
-// CALCOLO PREZZO PER KM
-let biglietto = (distanza * prezzo);
-// VARIABILE PREZZI CON APPLICAZIONE SCONTO
-
-// CONDIZIONI SCONTI
-if (età >=  65) {
-    biglietto = biglietto - (biglietto * 40 / 100);
-    console.log(biglietto);
-    console.log('applicato sconto anziano');
-}  else if (età <= 18);
-    biglietto = biglietto - (biglietto * 20 / 100);
-   console.log(biglietto);
-   console.log('applicato sconto minorenne');
-    
-
+   const kmPrice = 0.21;
+   const discountUnder18 = 20/100;
+   const discountOver65 = 20/100;
+   
+   let km, age, price;
+   let message = 'il prezzo del tuo biglietto è: ';
+   
+   km = parseInt(prompt('quanti Km vuoi percorrere ?'));
+   age = parseInt(prompt('Quanti anni hai ?'));
+   
+   if(isNaN(km) || isNaN(age)){
+       location.reload();
+   }
+   
+   price = kmPrice * km;
+   
+   if(age < 18){
+       price = price - (price * discountUnder18);
+   } else if(age >= 65){
+       price = price- (price * discountOver65)
+   }
+   
+   const ticketContainer = document.getElementById('ticket');
+   ticketContainer.innerHTML = `
+   Il prezzo del tuo biglietto è:
+       <em>${price} $</em>
+   `;
+   
 
